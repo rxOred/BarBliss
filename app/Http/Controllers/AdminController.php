@@ -42,4 +42,32 @@ class AdminController extends Controller
         $user->save();
         return redirect()->back();
     }
+
+    public function all_orgs_view()
+    {
+        $merchants = Merchant::all();
+        return view('admin.show_merchants', compact('merchants'));
+    }
+
+    public function delete_merchant($id)
+    {
+        $data = Merchant::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function all_org_admins_view()
+    {
+        $admins = User::where('user_type', 'org_admin')->get();
+        return view('admin.show_org_admins', compact('admins'));
+    }
+
+    public function delete_org_admin($id)
+    {
+        $data = User::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+
 }

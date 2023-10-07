@@ -36,3 +36,9 @@ Route::post('/create_merchant', [AdminController::class, 'create_merchant']);
 Route::get('/add_org_admin_view', [AdminController::class, 'add_org_admin_view']);
 
 Route::post('/create_org_admin', [AdminController::class, 'create_org_admin']);
+
+Route::get('/all_orgs_view', [AdminController::class, 'all_orgs_view']);
+Route::get('/delete_merchant/{id}', [AdminController::class, 'delete_merchant']);
+
+Route::get('/all_org_admins_view', [AdminController::class, 'all_org_admins_view']);
+Route::get('/delete_org_admin/{id}', [AdminController::class, 'delete_org_admin']);
