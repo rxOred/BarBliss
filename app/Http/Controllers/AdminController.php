@@ -69,5 +69,38 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function update_org_admin_view($id)
+    {
+        $admin = User::find($id);
+        return view('admin.update_org_admin', compact('admin'));
+    }
 
+    public function update_org_admin(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->nic = $request->nic;
+        $user->org_code = $request->org_code;
+        $user->save();
+        return redirect()->back();
+    }
+
+
+    public function update_merchant_view($id)
+    {
+        $merchant = Merchant::find($id);
+        return view('admin.update_merchant', compact('merchant'));
+    }
+
+    public function update_merchant(Request $request, $id)
+    {
+        $merchant = Merchant::find($id);
+        $merchant->name = $request->name;
+        $merchant->business_id = $request->business_id;
+        $merchant->license_id = $request->license_id;
+        $merchant->org_code = $request->org_code;
+        $merchant->save();
+        return redirect()->back();
+    }
 }

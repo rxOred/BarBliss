@@ -40,7 +40,7 @@
                         <td style="padding:10px">{{$admin->org_code}}</td>
 
                         <td><a href="{{url('delete_org_admin', $admin->id)}}" class="btn btn-danger">Delete</a></td>
-                        <td><a href="{{url('update_org_admin')}}" class="btn btn-primary">Update</a></td>
+                        <td><a href="{{url('update_org_admin_view', $admin->id)}}" class="btn btn-primary">Update</a></td>
                     </tr>
                     @endforeach
                 </table>

@@ -40,7 +40,7 @@
                         <td style="padding:10px">{{$merchant->org_code}}</td>
 
                         <td><a href="{{url('delete_merchant', $merchant->id)}}" class="btn btn-danger">Delete</a></td>
-                        <td><a href="{{url('update_merchant')}}" class="btn btn-primary">Update</a></td>
+                        <td><a href="{{url('update_merchant_view', $merchant->id)}}" class="btn btn-primary">Update</a></td>
                     </tr>
                     @endforeach
                 </table>

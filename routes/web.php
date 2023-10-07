@@ -42,3 +42,9 @@ Route::get('/delete_merchant/{id}', [AdminController::class, 'delete_merchant'])
 
 Route::get('/all_org_admins_view', [AdminController::class, 'all_org_admins_view']);
 Route::get('/delete_org_admin/{id}', [AdminController::class, 'delete_org_admin']);
+
+Route::get('/update_org_admin_view/{id}', [AdminController::class, 'update_org_admin_view']);
+Route::get('/update_org_admin/{id}', [AdminController::class, 'update_org_admin']);
+
+Route::get('/update_merchant_view/{id}', [AdminController::class, 'update_merchant_view']);
+Route::get('/update_org_admin/{id}', [AdminController::class, 'update_org_admin']);
